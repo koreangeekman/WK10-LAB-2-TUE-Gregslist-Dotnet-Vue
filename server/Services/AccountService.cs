@@ -1,4 +1,4 @@
-namespace Gregslist-dotnet-vue.Services;
+namespace Gregslist.Services;
 
 public class AccountService
 {

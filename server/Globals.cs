@@ -11,6 +11,6 @@ global using Dapper;
 global using CodeWorks.Utils;
 
 // APPLICATION SPECIFIC
-global using Gregslist-dotnet-vue.Repositories;
-global using Gregslist-dotnet-vue.Services;
-global using Gregslist-dotnet-vue.Models;
+global using Gregslist.Repositories;
+global using Gregslist.Services;
+global using Gregslist.Models;

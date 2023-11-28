@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Gregslist-dotnet-vue": {
+    "Gregslist": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -1,4 +1,4 @@
-namespace Gregslist-dotnet-vue.Repositories;
+namespace Gregslist.Repositories;
 
 public class AccountsRepository
 {

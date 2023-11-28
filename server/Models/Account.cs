@@ -1,4 +1,4 @@
-namespace Gregslist-dotnet-vue.Models;
+namespace Gregslist.Models;
 
 public class Account
 {

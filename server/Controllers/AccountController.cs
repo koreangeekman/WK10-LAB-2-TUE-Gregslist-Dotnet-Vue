@@ -1,4 +1,4 @@
-namespace Gregslist-dotnet-vue.Controllers;
+namespace Gregslist.Controllers;
 
 [ApiController]
 [Route("[controller]")]

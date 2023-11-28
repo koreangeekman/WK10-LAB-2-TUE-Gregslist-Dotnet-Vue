@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Gregslist-dotnet-vue;
+namespace Gregslist;
 
 public class Program
 {
