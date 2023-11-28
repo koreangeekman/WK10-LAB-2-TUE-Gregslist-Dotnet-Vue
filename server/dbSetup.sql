@@ -29,7 +29,7 @@ CREATE TABLE
         price INT NOT NULL,
         bedrooms TINYINT NOT NULL,
         bathrooms TINYINT NOT NULL,
-        imgUrl VARCHAR(384)
+        imgUrl VARCHAR(384) NOT NULL
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
@@ -44,7 +44,7 @@ CREATE TABLE
         description VARCHAR(1024) NOT NULL,
         price INT NOT NULL,
         mileage INT NOT NULL,
-        imgUrl VARCHAR(384)
+        imgUrl VARCHAR(384) NOT NULL
     ) default charset utf8 COMMENT '';
 
 INSERT INTO
