@@ -24,13 +24,13 @@ public class CarService(CarRepository carRepository)
   internal Car UpdateCar(int carId, Car carData)
   {
     Car car = GetCarById(carId);
-    car.Make = carData.Make;
-    car.Model = carData.Model;
-    car.Year = carData.Year;
-    car.Price = carData.Price;
-    car.Mileage = carData.Mileage;
-    car.Color = carData.Color;
-    car.ImgUrl = carData.ImgUrl;
+    car.Make = carData.Make ?? car.Make;
+    car.Model = carData.Model ?? car.Model;
+    car.Year = carData.Year ?? car.Year;
+    car.Price = carData.Price ?? car.Price;
+    car.Mileage = carData.Mileage ?? car.Mileage;
+    car.Color = carData.Color ?? car.Color;
+    car.ImgUrl = carData.ImgUrl ?? car.ImgUrl;
 
     carRepository.UpdateCar(car);
     return car;
