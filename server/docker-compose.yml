@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/Gregslist-dotnet-vue:latest
+    env_file:
+      - Gregslist-dotnet-vue-env
+    ports:
+      - "7045:80"
