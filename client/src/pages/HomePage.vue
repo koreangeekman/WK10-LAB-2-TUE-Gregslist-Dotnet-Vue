@@ -1,43 +1,28 @@
 <template>
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <div class="home-card p-5 card align-items-center shadow rounded elevation-3">
-      <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo"
-        class="rounded-circle">
-      <h1 class="my-5 bg-dark text-white p-3 rounded text-center">
-        Vue 3 Starter
-      </h1>
-    </div>
+  <div class="home d-flex align-items-center justify-content-center p-0 m-0">
+    <img src="https://user-images.githubusercontent.com/102513373/208978485-ee3a19b6-ebd8-4745-b0a2-7e509552146c.png"
+      alt="Gregslist Logo" class="rounded-circle">
   </div>
 </template>
 
 <script>
 export default {
   setup() {
-    return {
-      
-    }
+    return {}
   }
 }
 </script>
 
 <style scoped lang="scss">
 .home {
-  display: grid;
-  height: 80vh;
+  background-color: #123456;
   place-content: center;
-  text-align: center;
   user-select: none;
+  height: 90.1dvh;
 
-  .home-card {
-    width: clamp(500px, 50vw, 100%);
-
-    >img {
-      height: 200px;
-      max-width: 200px;
-      width: 100%;
-      object-fit: contain;
-      object-position: center;
-    }
+  >img {
+    object-fit: contain;
+    object-position: center;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 import Pop from "./Pop.js"
 
-const APP_NAME = "Gregslist"
+const APP_NAME = "gregslist-vue"
 
 export function saveState(key, value) {
   try {
