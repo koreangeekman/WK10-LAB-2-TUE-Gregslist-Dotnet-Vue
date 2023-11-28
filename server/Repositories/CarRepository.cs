@@ -1,4 +1,3 @@
-
 namespace Gregslist.Repositories;
 
 public class CarRepository(IDbConnection db)
