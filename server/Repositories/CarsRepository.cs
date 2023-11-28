@@ -1,6 +1,6 @@
 namespace Gregslist.Repositories;
 
-public class CarRepository(IDbConnection db)
+public class CarsRepository(IDbConnection db)
 {
   internal List<Car> GetCars()
   {

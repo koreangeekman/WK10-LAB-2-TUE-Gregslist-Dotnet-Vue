@@ -1,23 +1,23 @@
 namespace Gregslist.Services;
 
-public class CarService(CarRepository carRepository)
+public class CarsService(CarsRepository carsRepository)
 {
   internal List<Car> GetCars()
-  { return carRepository.GetCars(); }
+  { return carsRepository.GetCars(); }
 
   internal Car GetCarById(int carId)
   {
-    Car car = carRepository.GetCarById(carId);
+    Car car = carsRepository.GetCarById(carId);
     if (car == null) { throw new Exception($"Invalid Car Id: {carId}"); }
     return car;
   }
 
   internal Car CreateCar(Car carData)
-  { return carRepository.CreateCar(carData); }
+  { return carsRepository.CreateCar(carData); }
 
   internal string DeleteCar(int carId)
   {
-    carRepository.DeleteCar(carId);
+    carsRepository.DeleteCar(carId);
     return "Car has been deleted";
   }
 
@@ -32,7 +32,7 @@ public class CarService(CarRepository carRepository)
     car.Color = carData.Color ?? car.Color;
     car.ImgUrl = carData.ImgUrl ?? car.ImgUrl;
 
-    carRepository.UpdateCar(car);
+    carsRepository.UpdateCar(car);
     return car;
   }
 }
