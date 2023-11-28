@@ -13,9 +13,34 @@ CREATE TABLE
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'generated at api',
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        name CHAR(128) NOT NULL,
+        title CHAR(128) NOT NULL,
         description CHAR(128) NOT NULL,
         salary INT NOT NULL
     ) default charset utf8 COMMENT '';
 
-INSERT INTO jobs (name) VALUES('')
+CREATE TABLE
+    IF NOT EXISTS houses(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'auto inc int ID',
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        title CHAR(128) NOT NULL,
+        description VARCHAR(1024) NOT NULL,
+        price INT NOT NULL,
+        bedrooms TINYINT NOT NULL,
+        bathrooms TINYINT NOT NULL,
+        imgUrl VARCHAR(384)
+    ) default charset utf8 COMMENT '';
+
+CREATE TABLE
+    IF NOT EXISTS cars(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'auto inc int ID',
+        createdAt DATETIME CURRENT_TIMESTAMP,
+        updatedAt DATETIME CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        title CHAR(128) NOT NULL,
+        description VARCHAR(1024) NOT NULL,
+        price INT NOT NULL,
+        mileage INT NOT NULL,
+        imgUrl VARCHAR(384)
+    ) default charset utf8 COMMENT '';
+
+INSERT INTO jobs (name, description, salary) VALUES('')
