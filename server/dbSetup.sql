@@ -71,6 +71,15 @@ VALUES (
         69420,
         100,
         'https://images.unsplash.com/photo-1579226305581-d56b4afc48d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZjE1MCUyMGJsdWV8ZW58MHx8MHx8fDA%3D'
+    ), (
+        "Honda",
+        "Nighthawk",
+        "Black",
+        "CB750 Motorcycle inline-4 carbureted",
+        1999,
+        6999,
+        8888,
+        "https://cdn-fastly.motorcycle.com/media/2023/03/07/9932884/1999-honda-cb750-nighthawk-750.jpg?size=720x845&nocrop=1"
     )
 
 INSERT INTO
