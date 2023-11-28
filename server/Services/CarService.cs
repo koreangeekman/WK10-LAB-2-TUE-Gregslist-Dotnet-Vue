@@ -21,9 +21,18 @@ public class CarService(CarRepository carRepository)
     return "Car has been deleted";
   }
 
-  internal Car UpdateCar(Car carData)
+  internal Car UpdateCar(int carId, Car carData)
   {
-    Car car = carRepository.UpdateCar(carData);
+    Car car = GetCarById(carId);
+    car.Make = carData.Make;
+    car.Model = carData.Model;
+    car.Year = carData.Year;
+    car.Price = carData.Price;
+    car.Mileage = carData.Mileage;
+    car.Color = carData.Color;
+    car.ImgUrl = carData.ImgUrl;
+
+    carRepository.UpdateCar(car);
     return car;
   }
 }

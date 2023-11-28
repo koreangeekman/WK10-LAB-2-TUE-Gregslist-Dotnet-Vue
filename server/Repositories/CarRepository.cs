@@ -12,7 +12,7 @@ public class CarRepository(IDbConnection db)
 
   internal Car GetCarById(int carId)
   {
-    string sql = "SELECT * FROM cars WHERE id = @cardId";
+    string sql = "SELECT * FROM cars WHERE id = @carId";
     Car car = db.QueryFirstOrDefault<Car>(sql, new { carId });
     return car;
   }
@@ -31,7 +31,7 @@ public class CarRepository(IDbConnection db)
 
   internal void DeleteCar(int carId)
   {
-    string sql = "DELETE FROM cars WHERE id = @carId";
+    string sql = "DELETE FROM cars WHERE id = @carId LIMIT = 1";
     db.Query<Car>(sql, new { carId });
   }
 
