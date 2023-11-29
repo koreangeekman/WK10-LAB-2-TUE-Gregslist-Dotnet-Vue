@@ -10,7 +10,7 @@ public class JobsRepo(IDbConnection db)
 
   internal Job GetJobById(int jobId)
   {
-    string sql = "SELECT * FROM jobs WHERE id = @Id;";
+    string sql = "SELECT * FROM jobs WHERE id = @jobId;";
     return db.QueryFirstOrDefault<Job>(sql, new { jobId });
   }
 
@@ -32,7 +32,14 @@ public class JobsRepo(IDbConnection db)
 
   internal Job UpdateJob(Job jobData)
   {
-    string sql = @"";
+    string sql = @"UPDATE jobs
+    SET
+    title = @Title,
+    description = @Description,
+    salary = @Salary
+    WHERE id = @Id;
+
+    SELECT * FROM jobs WHERE id = @Id;";
     return db.QueryFirstOrDefault<Job>(sql, jobData);
   }
 }
