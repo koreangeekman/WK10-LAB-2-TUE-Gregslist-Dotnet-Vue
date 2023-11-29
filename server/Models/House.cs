@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Gregslist.Models;
 
 public class House
@@ -6,7 +8,7 @@ public class House
   public string Title { get; set; }
   public string Description { get; set; }
   public int? Year { get; set; }
-  public int? Price { get; set; }
+  public UInt64? Price { get; set; }
   public int? Bedrooms { get; set; }
   public int? Bathrooms { get; set; }
   public string ImgUrl { get; set; }

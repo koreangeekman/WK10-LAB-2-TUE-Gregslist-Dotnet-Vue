@@ -25,10 +25,10 @@ CREATE TABLE
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         title CHAR(128) NOT NULL,
         description VARCHAR(1024) NOT NULL,
-        year INT NOT NULL,
-        price INT NOT NULL,
-        bedrooms TINYINT NOT NULL,
-        bathrooms TINYINT NOT NULL,
+        year INT UNSIGNED NOT NULL,
+        price BIGINT UNSIGNED NOT NULL,
+        bedrooms TINYINT UNSIGNED NOT NULL,
+        bathrooms TINYINT UNSIGNED NOT NULL,
         imgUrl VARCHAR(384) NOT NULL
     ) default charset utf8 COMMENT '';
 
@@ -100,19 +100,7 @@ VALUES (
         1,
         1,
         "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8fDA%3D"
-    );
-
-INSERT INTO
-    houses (
-        title,
-        description,
-        year,
-        price,
-        bedrooms,
-        bathrooms,
-        imgUrl
-    )
-VALUES (
+    ), (
         'a modern house',
         'a big boxy building',
         2020,
