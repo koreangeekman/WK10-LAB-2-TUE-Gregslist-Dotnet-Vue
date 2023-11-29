@@ -25,6 +25,13 @@ public class CarsController(CarsService carsService) : ControllerBase
     catch (Exception e) { return BadRequest(e.Message); }
   }
 
+  [HttpDelete("{carId}")]
+  public ActionResult<string> DeleteCar(int carId)
+  {
+    try { return Ok(carsService.DeleteCar(carId)); }
+    catch (Exception e) { return BadRequest(e.Message); }
+  }
+
   [HttpPut("{carId}")]
   public ActionResult<Car> UpdateCar(int carId, [FromBody] Car carData)
   {
