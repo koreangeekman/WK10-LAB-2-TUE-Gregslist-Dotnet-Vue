@@ -20,7 +20,7 @@ public class CarsRepository(IDbConnection db)
   {
     string sql = @"
     INSERT INTO cars(make, model, year, color, price, description, mileage, imgUrl)
-    VALUE(@Make, @Model, @Year, @Color, @Price, @Description, @Mileage, @ImgUrl);
+    VALUES(@Make, @Model, @Year, @Color, @Price, @Description, @Mileage, @ImgUrl);
     
     SELECT * FROM cars WHERE id = LAST_INSERT_ID();";
 
