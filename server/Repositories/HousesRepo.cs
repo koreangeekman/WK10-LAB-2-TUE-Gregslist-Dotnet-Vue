@@ -26,7 +26,8 @@ public class HousesRepo(IDbConnection db)
 
   internal void DeleteHouse(int houseId)
   {
-    string sql = "DELETE FROM houses WHERE id = @houseId LIMIT = 1;";
+    House house = GetHouseById(houseId) ?? throw new Exception($"No house with ID: {houseId}");
+    string sql = "DELETE FROM houses WHERE id = @houseId LIMIT 1;";
     db.Query(sql, new { houseId });
   }
 

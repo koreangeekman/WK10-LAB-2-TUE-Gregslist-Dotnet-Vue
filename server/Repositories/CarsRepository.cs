@@ -30,7 +30,7 @@ public class CarsRepository(IDbConnection db)
 
   internal void DeleteCar(int carId)
   {
-    string sql = "DELETE FROM cars WHERE id = @carId LIMIT = 1";
+    string sql = "DELETE FROM cars WHERE id = @carId LIMIT 1";
     db.Query<Car>(sql, new { carId });
   }
 

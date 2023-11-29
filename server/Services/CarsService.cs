@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+
 namespace Gregslist.Services;
 
 public class CarsService(CarsRepository carsRepository)
@@ -17,6 +19,7 @@ public class CarsService(CarsRepository carsRepository)
 
   internal string DeleteCar(int carId)
   {
+    GetCarById(carId);
     carsRepository.DeleteCar(carId);
     return "Car has been deleted";
   }
